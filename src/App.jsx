@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -25,33 +25,37 @@ function App() {
 
   const showNoButton = noCount < 5;
 
-  if (showLove) {
-    return (
-      <div className="love-screen">
-        <div className="sparkles">
-          {[...Array(100)].map((_, i) => (
+ if (showLove) {
+  return (
+    <div className="love-screen">
+      <div className="sparkles">
+        {[...Array(100)].map((_, i) => {
+          const size = 4 + Math.random() * 7; // 4px - 11px
+          return (
             <div
               key={i}
               className="sparkle"
               style={{
                 left: `${Math.random() * 100}%`,
+                width: `${size}px`,
+                height: `${size}px`,
                 animationDuration: `${2 + Math.random() * 3}s`,
-                width: `${4 + Math.random() * 7}px`,
-                height: `${4 + Math.random() * 7}px`,
                 backgroundColor: `hsl(${Math.random() * 360}, 80%, 60%)`,
               }}
             ></div>
-          ))}
-        </div>
-        <h1> Nonna I love you 3000 💋✨</h1>
-        <img
-          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmM0ZXFkYzY5YjJvaDAyaXB4c2xyMDd0ejV3dXJtenI3c214NWwwZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IzXiddo2twMmdmU8Lv/giphy.gif"
-          alt="cute hug"
-          className="hug-gif"
-        />
+          );
+        })}
       </div>
-    );
-  }
+      <h1>Nonna I love you 3000 💋✨</h1>
+      <img
+        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmM0ZXFkYzY5YjJvaDAyaXB4c2xyMDd0ejV3dXJtenI3c214NWwwZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IzXiddo2twMmdmU8Lv/giphy.gif"
+        alt="cute hug"
+        className="hug-gif"
+      />
+    </div>
+  );
+}
+
 
   return (
     <div className="App">
@@ -68,7 +72,7 @@ function App() {
         {showNoButton && (
           <button
             className="no-btn"
-            style={{ transform: `scale(${Math.max(0.3, 1 - noCount * 0.1)})` }}
+            style={{ transform: `scale(${Math.max( 1 - noCount * 0.1)})` }}
             onClick={handleNo}
           >
             No(Daba k dikha)

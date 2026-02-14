@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background: linear-gradient(135deg, #f92f36, #f3ab97);
   font-family: 'Comic Sans MS', cursive, sans-serif;
   text-align: center;
 }
@@ -13,7 +13,7 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 50px;
   color: #fff;
-  text-shadow: 2px 2px 5px #ff69b4;
+  text-shadow: 2px 2px 5px #c30262;
 }
 
 .buttons {
@@ -29,15 +29,15 @@ button {
   cursor: pointer;
   transition: transform 0.2s;
   color: white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(126, 126, 126, 0.2);
 }
 
 .yes-btn {
-  background: #ff69b4;
+  background: #fe5b84;
 }
 
 .no-btn {
-  background: #ff1493;
+  background: #f91b4b;
 }
 
 /* LOVE SCREEN */
@@ -48,8 +48,8 @@ button {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: radial-gradient(circle, #d3457e, #ffb6c1);
-  color: #ff0066;
+  background: radial-gradient(circle, #ff1472, #f78092);
+  color: #f33c85;
   font-size: 2rem;
   overflow: hidden;
   text-align: center;
